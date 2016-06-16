@@ -4,10 +4,10 @@ def checkio(data):
     xor = a ^ b
     carry = a & b
     while carry:
-        xor2 = xor
+        original_xor = xor
         carry <<= 1
         xor ^= carry
-        carry &= xor2
+        carry &= original_xor
     return xor
 
 if __name__ == '__main__':
